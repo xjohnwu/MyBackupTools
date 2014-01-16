@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBackupTools", "MyBackupTools\MyBackupTools.csproj", "{4E9FD22B-E289-4485-ACE3-1272B62E5B9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{E5DA4C96-3AF7-465D-9EF7-182F073E70E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E9FD22B-E289-4485-ACE3-1272B62E5B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E9FD22B-E289-4485-ACE3-1272B62E5B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E9FD22B-E289-4485-ACE3-1272B62E5B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E9FD22B-E289-4485-ACE3-1272B62E5B9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5DA4C96-3AF7-465D-9EF7-182F073E70E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5DA4C96-3AF7-465D-9EF7-182F073E70E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5DA4C96-3AF7-465D-9EF7-182F073E70E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5DA4C96-3AF7-465D-9EF7-182F073E70E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
