@@ -1,6 +1,7 @@
 ﻿using MyBackupTools;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,23 +12,29 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            MissingFileDector comparer = new MissingFileDector();
-            var srcDir = @"I:\xJohn\Documents";
-            var destDir = @"E:\Documents\Dropbox\Doc";
-            var missingFiles = comparer.Compare(srcDir, destDir);
-
-            if (missingFiles.Any())
+            using (FileStream stream = new FileStream(@"d:\temp\summerintern.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite))
             {
-                foreach (var missingFile in missingFiles)
+                using (StreamWriter writer = new StreamWriter(stream))
                 {
-                    Console.WriteLine(missingFile.FullName);
+                    Console.SetOut(writer);
+                    MissingFileDector comparer = new MissingFileDector();
+                    var srcDir = @"I:\xJohn\Documents\Summer Internship";
+                    var destDir = @"E:\Documents\Dropbox\Doc\Summer Internship";
+                    var missingFiles = comparer.Compare(srcDir, destDir);
+
+                    if (missingFiles.Any())
+                    {
+                        foreach (var missingFile in missingFiles)
+                        {
+                            Console.WriteLine(missingFile.FullName);
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("No missing files!!!");
+                    }
                 }
             }
-            else
-            {
-                Console.WriteLine("No missing files!!!");
-            }
-            Console.ReadKey();
         }
     }
 }
