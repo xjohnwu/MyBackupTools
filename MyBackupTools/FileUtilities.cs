@@ -12,7 +12,11 @@ namespace MyBackupTools
         public static FileInfo[] GetAllFileInfo(string dir)
         {
             DirectoryInfo dirInfo = new DirectoryInfo(dir);
-            return dirInfo.GetFiles("*.*", SearchOption.AllDirectories);
+            if (dirInfo.Exists)
+            {
+                return dirInfo.GetFiles("*.*", SearchOption.AllDirectories);
+            }
+            return new FileInfo[0];
         }
     }
 }

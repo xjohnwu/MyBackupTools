@@ -18,8 +18,8 @@ namespace ConsoleApplication1
                 {
                     Console.SetOut(writer);
                     MissingFileDector comparer = new MissingFileDector();
-                    var srcDir = @"I:\xJohn\Documents\Summer Internship";
-                    var destDir = @"E:\Documents\Dropbox\Doc\Summer Internship";
+                    var srcDir = @"I:\xJohn\Documents";
+                    var destDir = @"E:\Documents\Dropbox\Doc";
                     var missingFiles = comparer.Compare(srcDir, destDir);
 
                     if (missingFiles.Any())
